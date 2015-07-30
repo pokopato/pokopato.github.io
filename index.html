@@ -14,49 +14,117 @@
   <!-- BootstrapのJS読み込み -->
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <style>
-    footer{border-top:1px solid #e7e7e7;background-color:#f8f8f8;text-align:center}
-    .copyright{padding:20px 0;font-size:12px;color:#666}
+    h1 { font-size: 1.5em; font-weight: normal;}
+    h2 { font-size: 1.2em; }
+    body { background-image: url("bg.jpg") }
+    header {
+      margin-top: 10px;
+    }
+    
+    .container{background-color: #AFEEEE; margin: 0 40px;}
+    footer { border-top:1px solid #e7e7e7; background-color:#FFDAB9;; text-align: center; margin-bottom: 10px;}
+    .copyright{padding: 20px 0;font-size:12px;color:#666}
+    div p { 
+      border: 3px solid #eaeaea;
+      padding: 10px 20px 10px 20px;
+      border-radius: 15px 15px;
+    }
+    .subtitle {
+      letter-spacing: 3px;
+      line-height: 40px;
+      color: #006400;
+      text-decoration: underline;
+      padding-top: 100px;
+    }
+    .box1 {
+      border: 3px solid #eaeaea;
+      padding: 10px 20px 10px 20px;
+      border-radius: 15px 15px;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapse" data-target="#site-menu">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">pokopatoのポートフォリオ。</a>
-        </div>
-        <div class="collapse navbar-collapse" id="site-menu">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">このサイトについて</a></li>
-            <li><a href="#">作品</a></li>
-            <li class="active"><a href="#">お問い合わせ</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  
   <div class="container">
-    <div class="page-header"><h1>自己紹介</h1></div>
+    <header style="background-color: #FFDAB9;">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapse" data-target="#site-menu">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="font-style: italic; font-size: 24px">pokopato's Portfolio</a>
+          </div>
+          <div class="collapse navbar-collapse" id="site-menu">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Introduce</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
     <div class="row">
-      <div class="col-md-offset-2 col-md-10">
+      <div class="col-sm-5 hidden-sm hidden-xs">
+        <img src="bg2.JPG" width="400px" height="300px" />
+      </div>
+      <div class="col-sm-6 col-sm-offset-1 ">
+        <h1 class="subtitle">pokopatoです。<br />
+          Ruby on Rails を使って <br />
+          フリーランスエンジニアやってます。  
+        </h1>
+      </div>
+    </div>
+    <hr />
+    
+    <div class="row">
+      <div class="col-sm-4">
+        <h2 class="col-sm-offset-1">--- 自己紹介 ---</h2>
         <p>
             大阪でフリーランスエンジニアやってます。主にRuby on Rails を取り扱っています。 <br />
           ポートフォリオを見て興味関心のある方はお気軽にお問い合わせにてメッセージください。<br />
-          仕事の依頼もそちらでどうぞよろしくお願いいたします。
+          仕事の依頼は<a href="#">Contact</a>より、どうぞよろしくお願いいたします。
         </p>
       </div>
+      
+      <div class="col-sm-4">
+        <h2 class="col-sm-offset-1">--- こんな感じの作ってます。 ---</h2>
+        <div class="box1">
+          <li><a href="#">メッセージボード</a></li>
+          <li><a href="#">Twitterクローン</a></li>
+          <li><a href="#">モノリスト</a></li>
+          <li><a href="#">オリジナル製作物（タイトル未定）</a></li>
+        </div>
+      </div>
+        
+      <div class="col-sm-4 hidden-sm">
+        <h2 class="col-sm-offset-1">--- お問い合わせはこちらまで ---</h2>
+        <div class="box1">
+          <table class="table">
+            <br />
+            <tr>
+              <span class="glyphicon glyphicon-envelope"></span>
+              <th>E-mail</th>
+              <td>pokopato@example.com</td>
+            </tr>
+            <br />
+            <tr>
+              <span class="glyphicon glyphicon-phone"></span>
+              <th>TEL</th>
+              <td>090-1234-5678</td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
+    <footer>
+      <div class="copyright">Copyright &copy 2015 pokopato.All rights reserved </div>
+    </footer>
   </div>
-  
-  <footer>
-    <div class="copyright">Copyright &copy 2015 pokopato.All rights reserved </div>
-  </footer>
 </body>
 </html>
